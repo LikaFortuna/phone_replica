@@ -1,0 +1,57 @@
+
+<html>
+<head>
+    <META  charset="utf-8">
+<link href="1.css" type="text/css" rel="stylesheet">
+
+<script src="js/underscore.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/backbone.js"></script>
+
+<script src="js/require.js"></script>
+<script src="js/main.js"></script>
+
+<script src="js/tags.js"></script> 
+<script>
+  require(['tags'],function(Module){console.log("require ran in html");});
+
+  /*
+  console.log("==============================ROUTER");
+
+var sitenav = Backbone.Router.extend({
+   routes:{
+    'div1': '1',
+    'div2': '2'
+    }, 
+    div1: function(){ alert('1');$('#1').css('display: block;'); $('#2').css('display','none !important');},
+    div2: function(){ $('#2').css('display: block;'); $('#1').css('display', 'none;');}
+});
+
+
+var mynav = new sitenav ();
+//*/    
+    
+    
+    //alert(navigator.product+"---"+navigator.platform);
+</script>
+</head>    
+    
+<body id="body">
+    <header>
+        <a href="" class="header_a">test</a>
+        <input type="text" class="header_input">
+
+        <a id="i" href="#2">div1 </a>
+        <b id="b">GREAT</b>
+        <i id="i" onclick="mynav.navigate('1'); console.log('HASH : '+Backbone.history.getHash()); ">div1 </i>
+        <i id="i" onclick="mynav.navigate('2');console.log('HASH : '+Backbone.history.getHash());">div2 </i>
+        
+    </header>
+    <div style="height: 2000px; width: 100%; background: yellow" id="1">div1
+    <div onclick=""><b>click me</b></div>
+    </div>
+    <div style="height: 2000px; width: 100%; background: green" id="2">div2</div>
+</body>
+    
+    
+</html>
